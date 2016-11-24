@@ -1,2 +1,4 @@
-# test-app-v2
-bitesize test-app
+Bitesize application for testing clusters
+
+Instructions for deploying in kube/instructions
+

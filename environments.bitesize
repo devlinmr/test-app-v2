@@ -19,7 +19,7 @@ environments:
           - name: APP_PORT
             value: 80
           - secret: CONSUL_TOKEN
-            value: test-app-dev
+            value: consul-test-app-dev-read
       - name: back
         external_url: back.test-app.dev.prsn-dev.io
         ssl: false

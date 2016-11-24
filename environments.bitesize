@@ -18,6 +18,8 @@ environments:
             value: back.test-app-dev.svc.cluster.local
           - name: APP_PORT
             value: 80
+          - secret: CONSUL_TOKEN
+            value: test-app-dev
       - name: back
         external_url: back.test-app.dev.prsn-dev.io
         ssl: false
@@ -29,7 +31,7 @@ environments:
     namespace: test-app
     deployment:
       method: rolling-upgrade
-    services: 
+    services:
       - name: front
         external_url: front.test-app.prsn-dev.io
         ssl: false

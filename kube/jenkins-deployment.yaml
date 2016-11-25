@@ -30,6 +30,8 @@ spec:
             -Dcom.sun.management.jmxremote.local.only=false
         - name: JENKINS_ADMIN_USER
           value: admin
+        - name: DOCKER_REGISTRY
+          value: bitesize-registry.default.svc.cluster.local:5000
         - name: JENKINS_ADMIN_PASSWORD
           value: very_secret
         - name: SEED_JOBS_REPO

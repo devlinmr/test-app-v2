@@ -4,7 +4,7 @@ metadata:
   labels:
     name: jenkins
   name: jenkins
-  namespace: test-app
+  namespace: test-app-dev
 spec:
   ports:
   - port: 80
@@ -19,7 +19,7 @@ metadata:
   labels:
     name: apt
   name: apt
-  namespace: test-app
+  namespace: test-app-dev
 spec:
   ports:
   - port: 80

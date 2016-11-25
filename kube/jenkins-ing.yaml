@@ -5,10 +5,10 @@ metadata:
   labels:
     ssl: "False"
   name: jenkins
-  namespace: test-app
+  namespace: test-app-dev
 spec:
   rules:
-  - host: jenkins.test-app.dev.prsn-dev.io
+  - host: jenkins.test-app.mdev.prsn-dev.io
     http:
       paths:
       - backend:

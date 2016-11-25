@@ -33,7 +33,7 @@ spec:
         - name: JENKINS_ADMIN_PASSWORD
           value: very_secret
         - name: SEED_JOBS_REPO
-          value: github.com:devlinmr/test-app-v2.git
+          value: git@github.com:devlinmr/test-app-v2.git
         - name: GIT_PRIVATE_KEY
           value: |
             -----BEGIN RSA PRIVATE KEY-----

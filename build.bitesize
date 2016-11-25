@@ -17,7 +17,7 @@ components:
         version: 5.9.0-1nodesource1~trusty1
         location: https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.9.0-1nodesource1~trusty1_amd64.deb
     repository:
-      git: github.com:devlinmr/test-app-v2.git
+      git: git@github.com:devlinmr/test-app-v2.git
       branch: master
     build:
       - shell: node --version
@@ -45,7 +45,7 @@ components:
         version: 5.9.0-1nodesource1~trusty1
         location: https://deb.nodesource.com/node_5.x/pool/main/n/nodejs/nodejs_5.9.0-1nodesource1~trusty1_amd64.deb
     repository:
-      git: github.com:devlinmr/test-app-v2.git
+      git: git@github.com:devlinmr/test-app-v2.git
       branch: master
     build:
       - shell: node --version

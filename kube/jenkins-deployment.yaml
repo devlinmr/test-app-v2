@@ -4,7 +4,7 @@ metadata:
   labels:
     name: jenkins
   name: jenkins
-  namespace: test-app
+  namespace: test-app-dev
 spec:
   replicas: 1
   selector:
@@ -33,7 +33,7 @@ spec:
         - name: JENKINS_ADMIN_PASSWORD
           value: very_secret
         - name: SEED_JOBS_REPO
-          value: git@github.com:AndyMoore111/test-app-v2.git
+          value: github.com:devlinmr/test-app-v2.git
         - name: GIT_PRIVATE_KEY
           value: |
             -----BEGIN RSA PRIVATE KEY-----
@@ -139,4 +139,3 @@ spec:
         name: jenkins-data
       - emptyDir: {}
         name: aptly-repository
-

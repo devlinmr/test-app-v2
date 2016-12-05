@@ -3,7 +3,9 @@ environments:
   - name: dev
     namespace: test-app-dev
     deployment:
-      method: rolling-upgrade
+     deployment:
+       method: bluegreen
+       active: blue
     services:
       - name: front
         external_url: front.test-app.dev.prsn-dev.io
@@ -19,7 +21,9 @@ environments:
           - name: APP_PORT
             value: 80
           - secret: CONSUL_TOKEN
-            value: consul-test-app-dev-read
+            value: consul-test-app-dev-write
+          - secret: VAULT_TOKEN
+            value: vault-test-app-dev-read
       - name: back
         external_url: back.test-app.dev.prsn-dev.io
         ssl: false
@@ -27,10 +31,14 @@ environments:
         env:
           - name: APP_PORT
             value: 80
+          - secret: CONSUL_TOKEN
+            value: consul-test-app-dev-read
   - name: prod
     namespace: test-app
     deployment:
-      method: rolling-upgrade
+     deployment:
+       method: bluegreen
+       active: blue
     services:
       - name: front
         external_url: front.test-app.prsn-dev.io
@@ -42,7 +50,9 @@ environments:
           - name: APP_PORT
             value: 80
           - secret: CONSUL_TOKEN
-            value: consul-test-app-dev-read
+            value: consul-test-app-dev-write
+          - secret: VAULT_TOKEN
+            value: vault-test-app-dev-read
       - name: back
         external_url: back.test-app.prsn-dev.io
         ssl: false
@@ -50,5 +60,5 @@ environments:
         env:
           - name: APP_PORT
             value: 80
-          - secret: CONSUL_TOKEN
-            value: consul-test-app-dev-read
+        - secret: CONSUL_TOKEN
+              value: consul-test-app-dev-read

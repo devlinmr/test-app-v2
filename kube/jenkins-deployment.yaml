@@ -104,7 +104,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: metadata.namespace
-        image: bitesize-registry.default.svc.cluster.local:5000/devlm/jenkins:0.1
+        image: bitesize-registry.default.svc.cluster.local:5000/geribatai/jenkins:3.4.35
         imagePullPolicy: Always
         securityContext:
           runAsUser: 1000

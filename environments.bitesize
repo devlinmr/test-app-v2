@@ -60,5 +60,5 @@ environments:
         env:
           - name: APP_PORT
             value: 80
-        - secret: CONSUL_TOKEN
-              value: consul-test-app-dev-read
+          - secret: CONSUL_TOKEN
+            value: consul-test-app-dev-read
